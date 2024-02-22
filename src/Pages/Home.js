@@ -11,6 +11,7 @@ import eventImg4 from '../images/WhatsApp Image 2024-02-19 at 9.19.31 AM.webp'
 import eventImg5 from '../images/WhatsApp Image 2024-02-19 at 12.01.21 PM.webp'
 import eventImg6 from '../images/WhatsApp Image 2024-02-19 at 12.01.22 PM.webp'
 import callImg from '../images/347422013_3592481327650889_8719124380261876941_n.webp'
+import testiImg1 from '../images/WhatsApp Image 2024-02-22 at 8.48.30 PM.webp'
 import { Link } from 'react-router-dom';
 import { useState,useRef } from 'react'
 const Home = () => {
@@ -328,6 +329,37 @@ const handleMouseLeave =()=>{
         </div>
         </div>
         </div>
+        {/* testimonial section */}
+        <section id='testimonial'>
+        <div class="bg-gray-950 pt-20 pb-20 w-full text-white">
+        <h2 class="text-center text-xl text-orange-500 pb-5">~ What our Trainees and Trained individuals have to say ~</h2>
+        <div class="w-10/12 m-auto bg-gray-50 rounded-md p-5 shadow-sm shadow-orange-500 text-black">
+        <h2 class="text-lg">Caroline Kinya<br/><span class="text-orange-700">Trainee</span></h2>
+        <div class="block md:flex">
+        <img class="w-56 mr-10 rounded-full shadow-md shadow-orange-500 mb-4 md:mb-0" src={testiImg1}/>
+        <p class="italic pb-4">
+        "
+        Through Tubonge initiative, I have been training and equipped with excellent
+        knowledge on matters SRHR which involves the right to choose whether,when,and 
+        with who to engage with in sexual  activity. The phenomenal training has enabled youths
+        from Tharaka Nithi county to understand the importance of sexual reproductive information
+        and the significance of enjoying safe sex.Tharaka community has benefited much from the
+        teaching and as for the youths who attended the training have been transformed and most
+        of then I included, we have decided to act as change agent in our community.
+        "
+        </p>
+        </div>
+        </div>
+        <div class="flex m-auto w-56 justify-between -mt-6">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-800 hover:text-red-600 cursor-pointer">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-800 hover:text-red-600 cursor-pointer">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+        </div>
+        </div>
+        </section>
         <section>
           {/* call us section */}
           <div class="w-full bg-gradient-to-r from-yellow-700 to-gray-50 pt-10" id="contacts">

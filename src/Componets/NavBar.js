@@ -42,11 +42,12 @@ useEffect(()=>{
                 </svg>
                 </div>
                 </div>
-                <div ref={menuRef} class="bg-gray-500 md:bg-gradient-to-r from-gray-800 to-gray-900 rounded-md md:rounded-full">
+                <div ref={menuRef} class="bg-gray-500 md:bg-gradient-to-r from-gray-800 to-gray-800 rounded-md md:rounded-full">
                     <ul class="block md:flex mt-4 m-auto">
                         <li><Link to="/Home" class="link ml-0 md:ml-2">Home</Link></li>
                         <li><Link to="/About" class="link">About Us</Link></li>
                         <li><a href="#events" class="link">Events</a></li>
+                        <li><a href="#" class="link mr-2 hover:text-yellow-500">Reviews</a></li>
                         <li><a href="#contacts" class="link mr-2 hover:text-yellow-500">Contacts</a></li>
                     </ul>
                 </div>
