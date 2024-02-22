@@ -12,6 +12,7 @@ import eventImg5 from '../images/WhatsApp Image 2024-02-19 at 12.01.21 PM.webp'
 import eventImg6 from '../images/WhatsApp Image 2024-02-19 at 12.01.22 PM.webp'
 import callImg from '../images/347422013_3592481327650889_8719124380261876941_n.webp'
 import testiImg1 from '../images/WhatsApp Image 2024-02-22 at 8.48.30 PM.webp'
+import testiImg2 from '../images/WhatsApp Image 2024-02-22 at 10.22.51 PM.webp'
 import { Link } from 'react-router-dom';
 import { useState,useRef } from 'react'
 const Home = () => {
@@ -34,7 +35,48 @@ const [isHovered3,setIsHovered3]=useState(false);
 const [isHovered4,setIsHovered4]=useState(false);
 const [isHovered5,setIsHovered5]=useState(false);
 const [isHovered6,setIsHovered6]=useState(false);
-
+// Tstimonial Changes
+const [text,setText]=useState('"Through Tubonge initiative, I have been training and equipped with excellent knowledge on matters SRHR which involves the right to choose whether,when,and with who to engage with in sexual  activity. The phenomenal training has enabled youths from Tharaka Nithi county to understand the importance of sexual reproductive information and the significance of enjoying safe sex.Tharaka community has benefited much from the teaching and as for the youths who attended the training have been transformed and most of then I included, we have decided to act as change agent in our community"');
+const [testimoner,setTestimoner]=useState('Caroline Kinya');
+const [testiTitle,setTestiTitle]=useState('Trainee');
+const [testiImg,setTestiImg]=useState(testiImg1);
+let testCount=0;
+let testimonerCount=0;
+let testiTitleCount=0;
+let testiImgCount=0;
+const testimonies=[
+  '"Through Tubonge initiative, I have been training and equipped with excellent knowledge on matters SRHR which involves the right to choose whether,when,and with who to engage with in sexual  activity. The phenomenal training has enabled youths from Tharaka Nithi county to understand the importance of sexual reproductive information and the significance of enjoying safe sex.Tharaka community has benefited much from the teaching and as for the youths who attended the training have been transformed and most of then I included, we have decided to act as change agent in our community"',
+  '"Thanks to Tuongee training, I\'ve gained valuable knowledge about my rights, the negative impacts of teenage pregnancy, FGM, and early marriages, and even how to end harmful practices like FGM and report them to the authorities. Now, I\'m empowered to become an advocate, educating both youth and the community about their rights and the dangers of harmful practices. I\'ll raise awareness about the negative consequences of FGM, teenage pregnancy, and early marriage, and even challenge ingrained cultural beliefs that perpetuate these harmful traditions. By sharing my knowledge and encouraging others to take action, I hope to create a more informed and empowered community."',
+]
+const testimoners=['Caroline Kinya','Mugao Lucyline Muthoni']
+const testimonerTitle=['Trainee','Trained Individual']
+const testimonerImg=[testiImg1,testiImg2]
+const handleBackTesti =()=>{
+  setText(testimonies[testCount])
+  setTestimoner(testimoners[testimonerCount])
+  setTestiTitle(testimonerTitle[testiTitleCount])
+  setTestiImg(testimonerImg[testiImgCount])
+  testiTitleCount++;
+  testimonerCount++;
+  testiImgCount++;
+  testCount++;
+}
+const handleForwardTesti =()=>{
+  setText(testimonies[testCount]);
+  setTestimoner(testimoners[testimonerCount]);
+  setTestiTitle(testimonerTitle[testiTitleCount]);
+  setTestiImg(testimonerImg[testiImgCount]);
+  testCount--;
+  testimonerCount--;
+  testiTitleCount--;
+  testiImgCount--;
+  if(testCount===-1 && testimonerCount===-1 && testiTitleCount===-1){
+    testCount=0;
+    testimonerCount=0;
+    testiTitleCount=0;
+    testiImgCount=0;
+  };
+}
 // first event image
 const handleMouseEnter=()=>{
   setIsHovered(true);
@@ -334,27 +376,19 @@ const handleMouseLeave =()=>{
         <div class="bg-gray-950 pt-20 pb-20 w-full text-white">
         <h2 class="text-center text-xl text-orange-500 pb-5">~ What our Trainees and Trained individuals have to say ~</h2>
         <div class="w-10/12 m-auto bg-gray-50 rounded-md p-5 shadow-sm shadow-orange-500 text-black">
-        <h2 class="text-lg">Caroline Kinya<br/><span class="text-orange-700">Trainee</span></h2>
+        <h2 class="text-lg">{testimoner}<br/><span class="text-orange-700">{testiTitle}</span></h2>
         <div class="block md:flex">
-        <img class="w-56 mr-10 rounded-full shadow-md shadow-orange-500 mb-4 md:mb-0" src={testiImg1}/>
+        <img class="w-56 mr-10 rounded-full shadow-md shadow-orange-500 mb-4 md:mb-0" src={testiImg}/>
         <p class="italic pb-4">
-        "
-        Through Tubonge initiative, I have been training and equipped with excellent
-        knowledge on matters SRHR which involves the right to choose whether,when,and 
-        with who to engage with in sexual  activity. The phenomenal training has enabled youths
-        from Tharaka Nithi county to understand the importance of sexual reproductive information
-        and the significance of enjoying safe sex.Tharaka community has benefited much from the
-        teaching and as for the youths who attended the training have been transformed and most
-        of then I included, we have decided to act as change agent in our community.
-        "
+        {text}
         </p>
         </div>
         </div>
         <div class="flex m-auto w-56 justify-between -mt-6">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-800 hover:text-red-600 cursor-pointer">
+        <svg onClick={handleBackTesti} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-800 hover:text-red-600 cursor-pointer">
         <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-800 hover:text-red-600 cursor-pointer">
+        <svg onClick={handleForwardTesti} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-800 hover:text-red-600 cursor-pointer">
         <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
         </svg>
         </div>
