@@ -12,7 +12,7 @@ const EarlyMarriages = () => {
           and pressure of the ladies to prove their fertility.<br/> Most of these
           marriages come to an end within very short period due to continued violence
           within the marriage.Across the globe 12 million girls are married under
-          the age of 18years which trickles down to around 2 years in every second!!!
+          the age of 18years which trickles down to around 2 girls in every second!!!
           </p>
           </div>
         <div>

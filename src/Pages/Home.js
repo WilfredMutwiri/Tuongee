@@ -193,7 +193,7 @@ const handleMouseLeave =()=>{
           Adolescent and young people have various needs on SRHR. Looking back
           to the backgrounds we grew up, it’s clear that many parents and guardians
           are not in position of providing solutions to the SRHR needs of the young people.<br/>
-          As a result, tubonge is built to eliminate this gape. This is a platform that you
+          As a result, tubonge is create to eliminate this gap. This is a platform that you
           can ask anything on SRHR and you will get a reply as soon as possible.             
           </p>
           <button class="p-2 bg-slate-400 rounded-md mt-10 font-semibold text-red-600 hover:text-white hover:bg-black">Join Us</button>
