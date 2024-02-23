@@ -159,7 +159,7 @@ const handleMouseLeave =()=>{
      // home section
      <div class="bg-gray-100 overflow-hidden" id='home'>
          <div className='bg'>
-         <div class="mt-20 md:mt-0 absolute inset-0 items-center justify-center overflow-hidden">
+         <div class="mt-32 md:mt-0 absolute inset-0 items-center justify-center overflow-hidden">
          <div class="m-auto w-full md:w-9/12 pt-36 md:pt-44 p-10 font-sans">
          <h2 class="text-white text-4xl md:text-6xl font-bold"><span class="text-red-600 text-2xl md:text-4xl font-bold">Let's Talk</span><br></br>About Sexual Reproductive Health Rights!</h2>
          <p class="text-white text-lg md:text-xl pt-8">
