@@ -159,14 +159,14 @@ const handleMouseLeave =()=>{
      // home section
      <div class="bg-gray-100 overflow-hidden" id='home'>
          <div className='bg'>
-         <div class="mt-32 md:mt-0 absolute inset-0 items-center justify-center overflow-hidden">
+         <div class="mt-10 md:mt-0 absolute inset-0 items-center justify-center overflow-hidden">
          <div class="m-auto w-full md:w-9/12 pt-36 md:pt-44 p-10 font-sans">
          <h2 class="text-white text-4xl md:text-6xl font-bold"><span class="text-red-600 text-2xl md:text-4xl font-bold">Let's Talk</span><br></br>About Sexual Reproductive Health Rights!</h2>
          <p class="text-white text-lg md:text-xl pt-8">
           Over 50,000 sexual abuse cases are reported annually.<br></br>
           <em>20% of these cases are caused by ignorance and lack of information to the victims.</em>
          </p>
-         <div class=" w-80 mt-6 md:mt-12 m-auto">
+         <div class="w-60 md:w-80 mt-6 md:mt-12 m-auto">
           <button class="homeBtn"><Link to="/about">Learn More</Link></button>
           <button class="homeBtn"><a href="#contacts">Let's Chat</a></button>
          </div>
@@ -193,7 +193,7 @@ const handleMouseLeave =()=>{
           Adolescent and young people have various needs on SRHR. Looking back
           to the backgrounds we grew up, it’s clear that many parents and guardians
           are not in position of providing solutions to the SRHR needs of the young people.<br/>
-          As a result, tubonge is create to eliminate this gap. This is a platform that you
+          As a result, tubonge is created to eliminate this gap. This is a platform that you
           can ask anything on SRHR and you will get a reply as soon as possible.             
           </p>
           <button class="p-2 bg-slate-400 rounded-md mt-10 font-semibold text-red-600 hover:text-white hover:bg-black">Join Us</button>

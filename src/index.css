@@ -27,7 +27,7 @@
   background-color:rgb(0,0,0,0.4);
 }
 .homeBtn{
-  @apply bg-slate-400 text-black w-28 rounded-md p-2 text-lg font-semibold mr-5 shadow-black shadow-md hover:text-white hover:bg-black;
+  @apply bg-slate-400 text-black w-24 md:w-32 rounded-md p-2 text-lg font-semibold mr-5 shadow-black shadow-md hover:text-white hover:bg-black;
 }
 .homeBtn:hover,#about button,#fgm button, form button{
   transition: all 400ms ease-in-out;
