@@ -23,9 +23,6 @@ const NavBar = () => {
             menuIconRef.current.style.display="block";
         }
     }
-    const handleReviews=()=>{
-        alert("Sorry,The reviews page is currently unavailable!")
-    }
 useEffect(()=>{
     const menu=menuRef.current;
     const menuIcon=menuIconRef.current;
@@ -50,7 +47,7 @@ useEffect(()=>{
                         <li><Link to="/Home" class="link ml-0 md:ml-2">Home</Link></li>
                         <li><Link to="/About" class="link">About Us</Link></li>
                         <li><a href="#events" class="link">Events</a></li>
-                        <li><a href="#" onClick={handleReviews} class="link mr-2 hover:text-yellow-500">Reviews</a></li>
+                        <li><a href="/Reviews" class="link mr-2 hover:text-yellow-500">Reviews</a></li>
                         <li><a href="#contacts" class="link mr-2 hover:text-yellow-500">Contacts</a></li>
                     </ul>
                 </div>

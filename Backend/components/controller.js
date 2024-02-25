@@ -12,9 +12,9 @@ const getReviews=async(req,res)=>{
 }
 // post review
 const createReview=async(req,res)=>{
-    const {fullName,topic,review}=req.body;
+    const {fullName,topic,reviewContent}=req.body;
     try {
-        const review=await Review.create({fullName,topic,review})
+        const review=await Review.create({fullName,topic,reviewContent})
         res.status(200).json({review})
     } catch (error) {
         res.status(400).json({error:error.message})

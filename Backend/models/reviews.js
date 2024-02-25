@@ -11,7 +11,7 @@ const reviewsSchema=new Schema({
         type:String,
         required:true
     },
-    review:{
+    reviewContent:{
         type:String,
         required:true
     }
