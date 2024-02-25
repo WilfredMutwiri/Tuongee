@@ -11,8 +11,8 @@ import eventImg4 from '../images/WhatsApp Image 2024-02-19 at 9.19.31 AM.webp'
 import eventImg5 from '../images/WhatsApp Image 2024-02-19 at 12.01.21 PM.webp'
 import eventImg6 from '../images/WhatsApp Image 2024-02-19 at 12.01.22 PM.webp'
 import callImg from '../images/347422013_3592481327650889_8719124380261876941_n.webp'
-import testiImg1 from '../images/carolineKinya.webp'
-import testiImg2 from '../images/mugaoLucyline.webp'
+import testiImg2 from '../images/carolineKinya.webp'
+import testiImg1 from '../images/mugaoLucyline.webp'
 import { Link } from 'react-router-dom';
 import { useState,useRef } from 'react'
 const Home = () => {
