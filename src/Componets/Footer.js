@@ -3,9 +3,10 @@ import FbLogo from '../images/facebook-1-svgrepo-com.svg'
 import linkedInLogo from '../images/linkedin-icon-svgrepo-com.svg'
 import IgLogo from '../images/instagram-1-svgrepo-com.svg'
 import whatsappLogo from '../images/whatsapp-svgrepo-com.svg'
+import wakeandShineLogo from '../images/wakeandshine.webp'
+import planInterLogo from '../images/planInternational.webp'
 import { Link } from 'react-router-dom';
 const Footer = () => {
-    <script src="https://kit.fontawesome.com/c12219ef08.js" crossorigin="anonymous"></script>
     return ( 
         <div id="footer">
         <div class="w-full p-5 bg-gradient-to-r from-gray-950 to-black pt-14 pb-10">
@@ -20,6 +21,13 @@ const Footer = () => {
         <a href='https://www.linkedin.com/in/joel-munene-21894918a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' target='_blank'><img id='socialIcon' src={linkedInLogo}/></a>
         <Link><img id='socialIcon' src={whatsappLogo}/></Link>
         </div>
+        </div>
+        <div class="mb-5 md:mb-0">
+            <h2 class="text-white text-lg md:text-xl">Our Sponsers</h2>
+            <div>
+            <img class='w-24 md:w-28 mt-2' src={wakeandShineLogo}/>
+            <img class='w-24 md:w-28 mt-4' src={planInterLogo}/>
+            </div>
         </div>
         <div class="mb-5 md:mb-0">
             <h2 class="text-white text-lg md:text-xl">Important Links</h2>
