@@ -11,8 +11,8 @@ import eventImg4 from '../images/WhatsApp Image 2024-02-19 at 9.19.31 AM.webp'
 import eventImg5 from '../images/WhatsApp Image 2024-02-19 at 12.01.21 PM.webp'
 import eventImg6 from '../images/WhatsApp Image 2024-02-19 at 12.01.22 PM.webp'
 import callImg from '../images/347422013_3592481327650889_8719124380261876941_n.webp'
-import testiImg1 from '../images/WhatsApp Image 2024-02-22 at 8.48.30 PM.webp'
-import testiImg2 from '../images/WhatsApp Image 2024-02-22 at 10.22.51 PM.webp'
+import testiImg1 from '../images/carolineKinya.webp'
+import testiImg2 from '../images/mugaoLucyline.webp'
 import { Link } from 'react-router-dom';
 import { useState,useRef } from 'react'
 const Home = () => {
@@ -39,7 +39,7 @@ const [isHovered6,setIsHovered6]=useState(false);
 const [text,setText]=useState('"Through Tubonge initiative, I have been training and equipped with excellent knowledge on matters SRHR which involves the right to choose whether,when,and with who to engage with in sexual  activity. The phenomenal training has enabled youths from Tharaka Nithi county to understand the importance of sexual reproductive information and the significance of enjoying safe sex.Tharaka community has benefited much from the teaching and as for the youths who attended the training have been transformed and most of then I included, we have decided to act as change agent in our community"');
 const [testimoner,setTestimoner]=useState('Caroline Kinya');
 const [testiTitle,setTestiTitle]=useState('Trainee');
-const [testiImg,setTestiImg]=useState(testiImg1);
+const [testiImg,setTestiImg]=useState(testiImg2);
 let testCount=0;
 let testimonerCount=0;
 let testiTitleCount=0;
@@ -50,7 +50,7 @@ const testimonies=[
 ]
 const testimoners=['Caroline Kinya','Mugao Lucyline Muthoni']
 const testimonerTitle=['Trainee','Trained Individual']
-const testimonerImg=[testiImg1,testiImg2]
+const testimonerImg=[testiImg2,testiImg1]
 const handleBackTesti =()=>{
   setText(testimonies[testCount])
   setTestimoner(testimoners[testimonerCount])
