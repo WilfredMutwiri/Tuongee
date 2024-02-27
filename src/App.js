@@ -7,8 +7,7 @@ import EarlyPregnancies from "./Componets/EarlyPregnancies";
 import Footer from "./Componets/Footer";
 import EarlyMarriages from "./Componets/EarlyMarriages";
 import Menstrual from "./Componets/Menstrual";
-import Reviews from "./Componets/reviews";
-// import Fgm from "./Componets/fgm";
+import Reviews from "./Componets/Reviews";
 function App() {
   return (
     <div className="App">
@@ -23,7 +22,7 @@ function App() {
     <Route path="/EarlyPregnancies" element={<EarlyPregnancies/>}/>
     <Route path="/EarlyMarriages" element={<EarlyMarriages/>}/>
     <Route path="/Menstrual" element={<Menstrual/>}/>
-    <Route path="/reviews" element={<Reviews/>}/>
+    <Route path="/Reviews" element={<Reviews/>}/>
     </Routes>
     <Footer/>
     </Router>
