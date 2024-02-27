@@ -3,6 +3,7 @@ import ReviewDetails from "../Componets/ReviewDetails";
 import ReviewsForm from "./ReviewsForm";
 import { useReviewsContext } from "../hooks/useReviewsContext";
 const Reviews = () => {
+    console.log("hello")
     const {reviews,dispatch}=useReviewsContext()
     useEffect(()=>{
         const fetchReviews=async()=>{
