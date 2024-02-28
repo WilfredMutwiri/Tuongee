@@ -3,11 +3,11 @@ import ReviewDetails from "../Componets/ReviewDetails";
 import ReviewsForm from "./ReviewsForm";
 import { useReviewsContext } from "../hooks/useReviewsContext";
 const Reviews = () => {
-    console.log("hello")
     const {reviews,dispatch}=useReviewsContext()
     useEffect(()=>{
         const fetchReviews=async()=>{
             const response=await fetch('/api/reviews')
+            console.log(response.status)
             const json=await response.json()
             if(response.ok){
                 dispatch({type:'SET_REVIEWS',payload:json})
