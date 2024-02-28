@@ -23,6 +23,7 @@ const ReviewsForm=()=>{
         if(!response.ok){
             setError(json.error)
             setEmptyFields(json.emptyFields)
+            console.log(setError)
         }
         if(response.ok){
             setFullName('');
