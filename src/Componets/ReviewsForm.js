@@ -18,11 +18,12 @@ const ReviewsForm=()=>{
             method:"POST",
             body:JSON.stringify(review),
             headers:{
-                "content-Type":"application/json"
+                "content-Type":"application/json",
+                "Accept":"application/json"
             }
         });
         setIsLoading(false); // Set loading state to false after fetching
-        const json=await response.json();
+        const json = await response.json();
         if(!response.ok){
             setError("An error occurred while submitting the review.");
             // setError(json.error)
