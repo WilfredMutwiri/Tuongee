@@ -8,9 +8,11 @@ const ReviewsForm=()=>{
     const [reviewContent,setReviewContent]=useState('');
     const [error,setError]=useState('');
     const [emptyFields,setEmptyFields]=useState([]);
+    const [isLoading, setIsLoading] = useState(false); // New state for loading
     // handle button submit
     const handleSubmit=async(e)=>{
-        e.preventDefault();
+        // e.preventDefault();
+        setIsLoading(true); // Set loading state to true before fetching
         const review={fullName,topic,reviewContent};
         const response =await fetch('/api/reviews',{
             method:"POST",
@@ -18,25 +20,43 @@ const ReviewsForm=()=>{
             headers:{
                 "content-Type":"application/json"
             }
-        })
+        });
+        setIsLoading(false); // Set loading state to false after fetching
         const json=await response.json();
-        {<p>loading...</p>}
         if(!response.ok){
-            setError(json.error)
-            setEmptyFields(json.emptyFields)
-            alert(setError)
-        }
-        if(response.ok){
-            setFullName('');
-            setTopic('');
-            setReviewContent('');
-            setReviewContent('');
-            setEmptyFields([]);
-            dispatch({type:'CREATE_REVIEW',payload:json})
-        }
+            setError("An error occurred while submitting the review.");
+            // setError(json.error)
+            setEmptyFields(json.emptyFields || []);
+            // setEmptyFields(json.emptyFields)
+         }
+          else {
+            try {
+              // Parse JSON only once inside the try-catch block
+              const json = await response.json();
+              setFullName("");
+              setTopic("");
+              setReviewContent("");
+              setEmptyFields([]);
+              dispatch({ type: "CREATE_REVIEW", payload: json });
+            } catch (error) {
+              // Handle potential errors during JSON parsing
+              setError("An error occurred while processing the review addition.");
+              console.error("Error parsing response JSON:", error);
+            }
+          };
+        
+        // if(response.ok){
+        //     setFullName('');
+        //     setTopic('');
+        //     setReviewContent('');
+        //     setReviewContent('');
+        //     setEmptyFields([]);
+        //     dispatch({type:'CREATE_REVIEW',payload:json})
+        // }
     }
         return (
-            <div class="">
+            <div className="">
+                    {isLoading && <p class="text-lg text-center italic text-red-600">Loading...</p>}
                 <form onSubmit={handleSubmit} class=" ml-0 md:ml-14 mt-5 md:mt-0">
                 <label class="text-lg text-orange-800">Full Name:</label><br/>
                 <input class="p-1 rounded-md shadow-sm shadow-blue-700 w-52"
@@ -51,6 +71,8 @@ const ReviewsForm=()=>{
                 onChange={(e)=>setReviewContent(e.target.value)}
                 value={reviewContent}
                 cols="30" rows="10" placeholder="FGM has been ..." required></textarea><br/>
+                  {/* Conditionally render loading indicator */}
+                <p>{error}</p>
                 <button class="bg-orange-700 shadow-sm shadow-black hover:bg-black text-white rounded-md p-2 w-40 text-center ml-4 mt-2">Add Review</button>
                 </form>
                 </div>
