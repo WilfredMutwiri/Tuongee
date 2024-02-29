@@ -24,7 +24,7 @@ const getReview=async(req,res)=>{
 }
 // create a review
 const createReview=async(req,res)=>{
-    const {fullName,topic,reviewContent}=req.params;
+    const {fullName,topic,reviewContent}=req.body;
     try {
         const review=await Review.create({fullName,topic,reviewContent})
         res.status(200).json(review)
