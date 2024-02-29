@@ -19,7 +19,7 @@ const ReviewsForm=()=>{
             body:JSON.stringify(review),
             headers:{
                 // "Content-Type":"application/json",
-                Accept:"application/json"
+                Accept:"application/json",
             }
         });
         setIsLoading(false); // Set loading state to false after fetching
