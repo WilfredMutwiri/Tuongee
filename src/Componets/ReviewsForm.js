@@ -20,10 +20,11 @@ const ReviewsForm=()=>{
             }
         })
         const json=await response.json();
+        {<p>loading...</p>}
         if(!response.ok){
             setError(json.error)
             setEmptyFields(json.emptyFields)
-            console.log(setError)
+            alert(setError)
         }
         if(response.ok){
             setFullName('');
@@ -31,7 +32,6 @@ const ReviewsForm=()=>{
             setReviewContent('');
             setReviewContent('');
             setEmptyFields([]);
-            console.log("New review added");
             dispatch({type:'CREATE_REVIEW',payload:json})
         }
     }
