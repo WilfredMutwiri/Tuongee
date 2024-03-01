@@ -3,7 +3,7 @@ import { useReviewsContext } from "../hooks/useReviewsContext"
 const ReviewDetails=({review})=>{
     const {dispatch}=useReviewsContext();
     const handleClick = async() =>{
-        const AdminPassword="!jm@29x";
+        const AdminPassword="!joelm@29x";
         const password=prompt("Enter Admin password to delete a review:")
         if(password==AdminPassword){
             const response =await fetch(SERVER_URL+'/api/reviews/'+review._id,{
