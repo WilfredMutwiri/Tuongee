@@ -1,3 +1,4 @@
+import { SERVER_URL } from "../constants";
 import { useReviewsContext } from "../hooks/useReviewsContext"
 const ReviewDetails=({review})=>{
     const {dispatch}=useReviewsContext();
@@ -5,7 +6,7 @@ const ReviewDetails=({review})=>{
         const AdminPassword=1234;
         const password=prompt("Enter Admin password to delete a review:")
         if(password==AdminPassword){
-            const response =await fetch('/api/reviews/'+review._id,{
+            const response =await fetch(SERVER_URL+'/api/reviews/'+review._id,{
                 method:"DELETE"
             })
             const json=await response.json()
