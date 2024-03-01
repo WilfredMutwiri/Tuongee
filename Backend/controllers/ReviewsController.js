@@ -27,8 +27,10 @@ const createReview=async(req,res)=>{
     const {fullName,topic,reviewContent}=req.body;
     try {
         const review=await Review.create({fullName,topic,reviewContent})
+        console.log("created successfully")
         res.status(200).json(review)
     } catch (error) {
+        console.log("failed to create")
         res.status(400).json({error:error.message})
     }
 }

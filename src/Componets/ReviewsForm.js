@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useReviewsContext } from "../hooks/useReviewsContext";
+import { SERVER_URL } from "../constants";
 const ReviewsForm=()=>{
     // create useState objects
     const {dispatch} =useReviewsContext();
@@ -11,19 +12,20 @@ const ReviewsForm=()=>{
     const [isLoading, setIsLoading] = useState(false); // New state for loading
     // handle button submit
     const handleSubmit=async(e)=>{
-        // e.preventDefault();
+        e.preventDefault();
         setIsLoading(true); // Set loading state to true before fetching
         const review={fullName,topic,reviewContent};
-        const response =await fetch('/api/reviews',{
+        const response =await fetch(SERVER_URL+'/api/reviews',{
             method:"POST",
             body:JSON.stringify(review),
             headers:{
-                // "Content-Type":"application/json",
-                Accept:"application/json",
+                "Content-Type":"application/json",
+                Accept:"application/json"
             }
         });
-        setIsLoading(false); // Set loading state to false after fetching
         const json = await response.json();
+        console.log(json)
+        setIsLoading(false); // Set loading state to false after fetching
         if(!response.ok){
             setError("An error occurred while submitting the review.");
             // setError(json.error)
@@ -32,8 +34,6 @@ const ReviewsForm=()=>{
          }
           else {
             try {
-              // Parse JSON only once inside the try-catch block
-              const json = await response.json();
               setFullName("");
               setTopic("");
               setReviewContent("");

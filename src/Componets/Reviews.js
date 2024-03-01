@@ -2,11 +2,12 @@ import { useEffect} from "react";
 import ReviewDetails from "../Componets/ReviewDetails";
 import ReviewsForm from "./ReviewsForm";
 import { useReviewsContext } from "../hooks/useReviewsContext";
+import { SERVER_URL } from "../constants";
 const Reviews = () => {
     const {reviews,dispatch}=useReviewsContext()
     useEffect(()=>{
         const fetchReviews=async()=>{
-            const response=await fetch('/api/reviews')
+            const response=await fetch(SERVER_URL+'/api/reviews')
             console.log(response.status)
             const json=await response.json()
             if(response.ok){
