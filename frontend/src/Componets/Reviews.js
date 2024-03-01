@@ -1,5 +1,5 @@
 import { useEffect} from "react";
-import ReviewDetails from "../Componets/ReviewDetails";
+import ReviewDetails from "./ReviewDetails";
 import ReviewsForm from "./ReviewsForm";
 import { useReviewsContext } from "../hooks/useReviewsContext";
 import { SERVER_URL } from "../constants";
@@ -14,7 +14,11 @@ const Reviews = () => {
                 dispatch({type:'SET_REVIEWS',payload:json})
             }
         }
-        fetchReviews()
+        try {
+            fetchReviews() 
+        } catch (error) {
+            alert("Failed to load previous reviews!")
+        }
     },[])
     return (
         <div class="bg-gradient-to-r from-gray-200 to-gray-400 pb-10 pt-5 w-full p-3 md:p-0">
