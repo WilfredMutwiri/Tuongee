@@ -8,7 +8,7 @@ const cors=require('cors');
 const reviewsRoutes=require('./routes/reviewsRouter')
 
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://tuongee.onrender.com",
     methods:"GET.POST,PUT,DELETE",
     allowedHeaders:"Content-Type,Authorization"
 }));
