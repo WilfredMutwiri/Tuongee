@@ -7,12 +7,13 @@ const app=express();
 const cors=require('cors');
 const reviewsRoutes=require('./routes/reviewsRouter')
 
-app.use(cors({
-    origin:"https://tuongee.onrender.com",
-    methods:"GET.POST,PUT,DELETE",
-    allowedHeaders:"Content-Type,Authorization"
-}));
+app.use(cors());
 
+// {
+//     origin:"https://tuongee.onrender.com",
+//     methods:"GET.POST,PUT,DELETE",
+//     allowedHeaders:"Content-Type,Authorization"
+// }
 app.use(reviewsRoutes);
 app.use(express.json());
 
