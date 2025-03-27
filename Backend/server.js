@@ -1,24 +1,27 @@
-// require dotenv
+
+;// require dotenv
 require('dotenv').config();
-// require express
 const express=require('express');
-// require mongoose
 const mongoose=require('mongoose');
-// initialize express
 const app=express();
-const cors=require('cors')
-// import routes
+const cors=require('cors');
 const reviewsRoutes=require('./routes/reviewsRouter')
-// middleware
+
+app.use(cors({
+    origin:"http://localhost:5173",
+    methods:"GET.POST,PUT,DELETE",
+    allowedHeaders:"Content-Type,Authorization"
+}));
+
+app.use(reviewsRoutes);
 app.use(express.json());
-app.use(cors())
+
 app.use((req,res,next)=>{
     console.log(req.path,req.method);
     next();
 })
 // routes 
-app.use('/api/reviews',reviewsRoutes);
-// app.use(reviewsRoutes)
+app.use('/api/reviews/',reviewsRoutes);
 // connect to db
 mongoose.connect(process.env.MONGO_URI)
     .then(()=>{

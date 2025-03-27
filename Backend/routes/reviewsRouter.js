@@ -11,9 +11,9 @@ const{
 // create router
 const router=express.Router();
 // get all reviews
-router.get('/',getReviews);
+router.get('/getReviews',getReviews);
 // create review
-router.post('/',createReview);
+router.post('/addReview',createReview);
 // get a single review
 router.get('/:id',getReview);
 // delete a single review
